@@ -9,13 +9,15 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  url: 'assets\Illustrations\fisica.svg'
+
   assedioType = [
-  {id: 1, nome: "Violência física", descricao: "tal tal tal"},
-  {id: 2, nome: "Assédio ou violência moral", descricao: "tal tal tal"},
-  {id: 3, nome: "Assédio ou violência sexual", descricao: "tal tal tal"},
-  {id: 4, nome: "Assédio verbal", descricao: "tal tal tal"},
-  {id: 5, nome: "Assédio psicológico", descricao: "tal tal tal"},
-  {id: 6, nome: "Assédio virtual", descricao: "tal tal tal"},
+  {id: 1, nome: "Física", descricao: "A violência ou assédio físico se caracteriza por empurrar, chutar, bater, violentar ou qualquer ação física conta a mulher.", imagem: "assets\\Illustrations\\fisica.svg"},
+  {id: 2, nome: "Moral", descricao: "A violência ou o assédio moral se caracteriza por toda e qualquer ato contra a dignidade da mulher, expondo-a à humilhação, calúnias, difamação e outros. ", imagem: "assets\\Illustrations\\moral.svg"},
+  {id: 3, nome: "Sexual", descricao: "A caracterização desta violência se dá pelo comportamento indesejado de caráter sexual sem consentimento da mulher, a criação de ambientes intimidativos colocando sua segurança em risco e etc.", imagem: "assets\\Illustrations\\sexual.svg"},
+  {id: 4, nome: "Verbal", descricao: "A violência ou o assédio verbal se caracteriza por xingamentos, insultos e exposições da mulher ao ridículo.", imagem: "assets\\Illustrations\\verbal.svg"},
+  {id: 5, nome: "Psicológica", descricao: "A violência ou assédio psiciológico se caracteriza por comportamentos agressivos e ofensivos, insistentes e abusivos. Chantagem emocional também é assédio psicológico!", imagem: "assets\\Illustrations\\psicologica.svg"},
+  {id: 6, nome: "Virtual", descricao: "A violência ou assédio virtual ocorre online, quando a mulher é ofendida, hostilizada e importunada com mensagens, ameaças, divulgação de dados e informações pessoais e todas as vertentes tóxicas da internet.", imagem: "assets\\Illustrations\\virtual.svg"},
   
   
 ];

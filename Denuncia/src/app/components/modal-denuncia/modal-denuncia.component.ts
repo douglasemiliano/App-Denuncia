@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ModalController } from '@ionic/angular';
 import { Component, Input, OnInit } from '@angular/core';
@@ -15,10 +16,8 @@ export class ModalDenunciaComponent implements OnInit {
   private apiURL: string;
 
   @Input() assedioType: string;
-  @Input() lastName: string;
-  @Input() middleInitial: string;
 
-  constructor(public modalController: ModalController) { 
+  constructor(public modalController: ModalController, public route: Router) { 
   
   }
 
@@ -30,6 +29,11 @@ export class ModalDenunciaComponent implements OnInit {
     if (this.modalController) {
       this.modalController.dismiss().then(() => { this.modalController = null; });
     }
+  }
+
+  goToDenuncia(){
+    this.dismissModal();
+    this.route.navigate(['/tabs/tab1']);
   }
 
 }
