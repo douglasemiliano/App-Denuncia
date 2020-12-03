@@ -1,10 +1,15 @@
+<ion-content>
 <div class="container">
   <ion-grid>
     <ion-row>
-      <ion-col size="6" *ngFor="let assedio of assedioType">
+      <ion-col size="12">
+        <h2 style="text-align: center; margin-top: 1em;">Tipos de violência e assédio</h2>
+      </ion-col>
+      <ion-col size="6" *ngFor="let assedio of assedioType" style="margin-top: -2em;">
             <ion-card (click)="presentModal(assedio)">
-              <ion-card-content style="text-align: center; height: 8em;">
-                {{assedio.nome}}
+              <ion-card-content style="text-align: center; height: 12em; color: #eb445a;">
+                <img src="{{assedio.imagem}}" style="width: 100%;">
+                <h2>{{assedio.nome}}</h2>
               </ion-card-content>
             </ion-card>
       </ion-col>
@@ -12,3 +17,4 @@
   </ion-grid>
 
 </div>
+</ion-content>

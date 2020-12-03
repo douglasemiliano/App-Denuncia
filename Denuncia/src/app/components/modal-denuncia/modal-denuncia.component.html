@@ -6,8 +6,24 @@
           </ion-button>  
         </ion-buttons>
     </ion-toolbar>
-    {{assedioType.nome}}
-    <br>
-    <br>
-    {{assedioType.descricao}}
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <h1 style="text-align: center;">Assédio ou violência</h1>
+        </ion-col>
+        <ion-col size="12" style="text-align: center; margin-top: -2em;">
+          <h1 style="color: #eb445a;"><strong>{{assedioType.nome}}</strong></h1>
+        </ion-col>
+        <ion-col class="ion-align-self-center" size="12">
+          <img src="{{assedioType.imagem}}" style="width: 80%; position: relative; top: 10%; left: 10%;">
+        </ion-col>
+        <ion-col size="12" style="margin-top: 1em; padding-left: 3em;padding-right: 3em; height: 50%px;" >
+          <h3 style="text-align: center;">{{assedioType.descricao}}</h3>
+        </ion-col>
+        <ion-col>
+          <ion-button type="submit" expand="block" (click)="goToDenuncia()">Realizar Denuncia <ion-ripple-effect type="unbounded"></ion-ripple-effect></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
 </div>

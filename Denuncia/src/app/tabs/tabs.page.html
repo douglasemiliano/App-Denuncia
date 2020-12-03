@@ -1,10 +1,11 @@
 <ion-tabs>
 
   <ion-header>
-      <mat-toolbar style="height: 3.5em; background-color: #ed576b;">
-            <ion-icon  *ngIf="!home"  name="home-outline" style="color: white;" (click)="goToHome()"></ion-icon>
-            <ion-icon  *ngIf="home" name="home" style="color: white;" (click)="goToHome()"></ion-icon>
-            <span style="color: white; margin-left: 1em;">Denuncia</span>
+      <mat-toolbar style="height: 3.5em; background-color: #ed576b; text-align: center;">
+            <ion-icon  *ngIf="!home"  name="home-outline" style="color: white; font-size: 24pt;" (click)="goToHome()"></ion-icon>
+            <ion-icon  *ngIf="home" name="home"style="color: white; font-size: 24pt;" (click)="goToHome()"></ion-icon>
+            <h2 style="color: white; width: 100%; text-align: center; ">Denuncia</h2>
+            <ion-icon  name="log-out-outline" style="color: white; font-size: 28pt;"></ion-icon>
 
       </mat-toolbar>
   </ion-header>
