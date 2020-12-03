@@ -25,10 +25,10 @@ export class Tab1Page {
     name: new FormControl('', [Validators.required]),
     age: new FormControl('', [Validators.required]),
     phone: new FormControl('', [Validators.required]),
-    assedioType: new FormControl('', [Validators.required]),
+    assediotype: new FormControl('', [Validators.required]),
     local: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
-    inContact: new FormControl('', [Validators.required]),
+    incontact: new FormControl('', [Validators.required]),
   });
 }
 onSubmit() {
