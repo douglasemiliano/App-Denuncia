@@ -1,4 +1,7 @@
+import { ModalDenunciaComponent } from './../components/modal-denuncia/modal-denuncia.component';
+import { ModalController } from '@ionic/angular';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +10,45 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  home: boolean;
+
+  constructor(public modalController: ModalController, public route: Router
+            ) {}
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: ModalDenunciaComponent,
+      componentProps: {
+        id: 1
+      }
+
+    });
+    return await modal.present();
+  }
+
+  dismissModal() {
+    if (this.modalController) {
+      this.modalController.dismiss().then(() => { this.modalController = null; });
+    }
+  }
+
+  goToDenuncia(){
+    this.route.navigate(['/tabs/tab1']);
+    this.home = false;
+  }
+  goToHome(){
+    this.route.navigate(['/tabs/tab2']);
+    this.home = true;
+  }
+
+  setHomeTrue(){
+    this.home = true;
+  }
+
+  setHomeFalse(){
+    this.home = false;
+  }
+
+
 
 }

@@ -1,17 +1,90 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="container" style="padding: 1em;">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <form [formGroup]="form" autocomplete="off" novalidate (ngSubmit)="onSubmit()" id="form-login">
+      <ion-grid>
+        <h1>Nova Denúncia</h1>
+            <ion-row class="linha">
+                <ion-col size="12">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                            <mat-label>Nome</mat-label>
+                            <input matInput type="text" class="form-control" formControlName="name" aria-describedby="emailHelp" placeholder="Maria do bairro">
+                        </mat-form-field>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="linha">
+                <ion-col size="9">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                            <mat-label>Telefone</mat-label>
+                            <input matInput  class="form-control" formControlName="phone" aria-describedby="emailHelp" placeholder="Telefone">
+                        </mat-form-field>
+                    </div>
+                </ion-col>
+                <ion-col size="3">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                            <mat-label>Idade</mat-label>
+                            <input matInput  class="form-control" formControlName="age" aria-describedby="emailHelp" placeholder="Idade">
+                        </mat-form-field>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="linha">
+                <ion-col size="12">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                            <mat-label>Tipo de assédio ou violência</mat-label>
+                            <mat-select formControlName="assedioType">
+                                <mat-option value="física">Violência física</mat-option>
+                                <mat-option value="moral">Assédio ou violência moral</mat-option>
+                                <mat-option value="sexual">Assédio ou violência sexual</mat-option>
+                                <mat-option value="verbal">Assédio verbal</mat-option>
+                                <mat-option value="psicológico">Assédio psicológico</mat-option>
+                                <mat-option value="virtual">Assédio virtual</mat-option>
+                            </mat-select>
+                            </mat-form-field>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="linha">
+                <ion-col size="12">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                            <mat-label>Local</mat-label>
+                            <input matInput type="text" class="form-control" formControlName="local" aria-describedby="emailHelp" placeholder="UFPB Campus Mangabeira">
+                        </mat-form-field>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="linha2">
+                <ion-col size="12">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                            <mat-label>Descrição</mat-label>
+                            <textarea matInput type="text" class="form-control" formControlName="description" placeholder="Um rapaz me..."></textarea>
+                          </mat-form-field>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Deseja que entremos em contato?</mat-label>
+                        <mat-select formControlName="inContact">
+                            <mat-option value="False">Não, obrigado!</mat-option>
+                            <mat-option value="True">Sim, por favor!</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                </ion-col>
+            </ion-row>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+
+        <ion-button type="submit" expand="block" (click)="onSubmit" [disabled]="!form.valid">Realizar Denuncia <ion-ripple-effect type="unbounded"></ion-ripple-effect></ion-button>
+
+        </ion-grid>
+    </form>
+</div>

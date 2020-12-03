@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { ModalController } from '@ionic/angular';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -9,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalDenunciaComponent implements OnInit {
 
-  constructor(public modalController: ModalController) { }
+  form: FormGroup;
+  private apiURL: string;
 
-  ngOnInit() {}
+  @Input() assedioType: string;
+  @Input() lastName: string;
+  @Input() middleInitial: string;
+
+  constructor(public modalController: ModalController) { 
+  
+  }
+
+  ngOnInit() {
+
+  }
 
   dismissModal() {
     if (this.modalController) {
