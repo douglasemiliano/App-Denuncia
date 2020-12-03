@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -13,7 +14,7 @@ export class Tab1Page {
   form: FormGroup;
   private apiURL: string;
 
-  constructor(private fb: FormBuilder,private http: HttpClient, public toastController: ToastController) { 
+  constructor(private fb: FormBuilder,private http: HttpClient, public toastController: ToastController, public route: Router) { 
     this.apiURL = 'http://localhost:8080/denuncias'
   }
 
@@ -34,7 +35,16 @@ export class Tab1Page {
 onSubmit() {
   console.log(JSON.stringify(this.form.value));
   this.createDenuncia(this.form.value);
+  this.resetForm(this.form);
+  this.route.navigate(['/tabs/tab2']);
   }
+
+  resetForm(form: FormGroup) {
+    form.reset();
+    Object.keys(form.controls).forEach(key => {
+      form.get(key).setErrors(null) ;
+    });
+}
 
   public createDenuncia(denuncia){
     this.http.post(this.apiURL, denuncia)
