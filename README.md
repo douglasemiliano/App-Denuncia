@@ -1,4 +1,6 @@
 # Aplicativo-de-Denuncia
-Frontend do app desenvolvido com IONIC
-Backend com Spring
-Banco PostgreSQL
+Frontend desenvolvido com IONIC;
+<br>
+Backend desenvolvido com Springboot;
+<br>
+Banco PostgreSQL;
