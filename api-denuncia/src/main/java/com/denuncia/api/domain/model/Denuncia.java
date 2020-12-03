@@ -1,5 +1,7 @@
 package com.denuncia.api.domain.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,6 +32,8 @@ public class Denuncia {
 	@NotNull
 	private boolean incontact;
 	
+	private LocalDate date;
+	
 	
 	public Long getId() {
 		return id;
@@ -52,16 +56,14 @@ public class Denuncia {
 	public String getPhone() {
 		return phone;
 		
-		
-		
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getAssedioType() {
+	public String getAssediotype() {
 		return assediotype;
 	}
-	public void setAssedioType(String assedioType) {
+	public void setAssediotype(String assedioType) {
 		this.assediotype = assedioType;
 	}
 	public String getDescription() {
@@ -76,14 +78,19 @@ public class Denuncia {
 	public void setLocal(String local) {
 		this.local = local;
 	}
-	public boolean isInContact() {
+	public boolean isIncontact() {
 		return incontact;
 	}
-	public void setInContact(boolean inContact) {
+	public void setIncontact(boolean inContact) {
 		this.incontact = inContact;
 	}
 	
-	
+	public LocalDate getDate() {
+		return date;
+	}
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
