@@ -1,0 +1,43 @@
+<div class="container" style="padding: 2em; height: 100%; background-image: url(assets/Illustrations/loginbg.png); background-repeat: no-repeat; background-size: cover;">
+
+    <form [formGroup]="form" autocomplete="off" novalidate (ngSubmit)="onSubmit()" id="form-login">
+      <ion-grid>
+          <ion-row>
+              <ion-col style="padding: 2em;">
+                <img src="assets\Illustrations\logo.svg" style="width: 100%; margin-top: 10em; margin-bottom: 1em;">
+              </ion-col>
+          </ion-row>
+            <ion-row class="linha">
+                <ion-col size="12">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" style="color: white;">Usuário</label>
+                        <input type="email" formControlName="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuário" style="background-color: transparent; border-color: white; color: white;">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                      </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="linha">
+                <ion-col size="12">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" style="color: white; margin-top: 1em;">Senha</label>
+                        <input type="password" formControlName="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="senha" style="background-color: transparent; border-color: white; color: white;">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                      </div>
+                </ion-col>
+
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="12" style="margin-top: 3em;">
+                    <button mat-raised-button color="basic" style="color: #eb445a; width: 100%;" (click)="onSubmit">E N T R A R</button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12" style="margin-top: 4em; color: white; text-align: center; font-size: 12pt;">
+                    <label (click)="onSubmit()" style="cursor: pointer">Não quero me identificar!</label>
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
+    </form>
+</div>
