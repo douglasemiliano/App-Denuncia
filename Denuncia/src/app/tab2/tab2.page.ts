@@ -9,23 +9,6 @@ import { ModalController } from '@ionic/angular';
 })
 export class Tab2Page {
 
-  constructor(public modalController: ModalController) {}
+  constructor() {}
 
-  async presentModal() {
-    const modal = await this.modalController.create({
-      component: ModalDenunciaComponent,
-      cssClass: 'my-custom-class'
-    });
-    return await modal.present();
-  }
-
-  dismissModal() {
-    if (this.modalController) {
-      this.modalController.dismiss().then(() => { this.modalController = null; });
-    }
-  }
-
-  
-
-  
 }
