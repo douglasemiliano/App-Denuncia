@@ -23,11 +23,9 @@ export class AppComponent {
     
   ) {
     this.initializeApp();
-    console.log('1', this.loginScreen)
     if(!this.loginScreen){
       this.presentModal();
       this.loginScreen = true;
-      console.log('2', this.loginScreen)
     }
   }
 

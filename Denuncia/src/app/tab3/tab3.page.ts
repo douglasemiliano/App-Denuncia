@@ -26,7 +26,6 @@ export class Tab3Page {
   
   
   async presentModal(id: any) {
-    console.log(id);
     const modal = await this.modalController.create({
       component: ModalDenunciaComponent,
       cssClass: 'my-custom-class',
