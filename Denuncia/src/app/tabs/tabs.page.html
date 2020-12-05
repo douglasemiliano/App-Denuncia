@@ -4,8 +4,8 @@
       <mat-toolbar style="height: 3.5em; background-color: #ed576b; text-align: center;">
             <ion-icon  *ngIf="!home"  name="home-outline" style="color: white; font-size: 24pt; cursor: pointer;" (click)="goToHome()"></ion-icon>
             <ion-icon  *ngIf="home" name="home"style="color: white; font-size: 24pt;" (click)="goToHome()"></ion-icon>
-            <div class="container"><img src="assets\Illustrations\logo.svg" style=""></div>
-            <ion-icon  name="log-out-outline" style="color: white; font-size: 28pt;"></ion-icon>
+            <div class="container"><img src="assets\Illustrations\logo.svg"></div>
+            <ion-icon  name="log-out-outline" style="color: white; font-size: 28pt; cursor: pointer;"(click)="presentModalLogout()"></ion-icon>
 
       </mat-toolbar>
   </ion-header>
