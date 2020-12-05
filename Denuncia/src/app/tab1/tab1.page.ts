@@ -33,7 +33,6 @@ export class Tab1Page {
   });
 }
 onSubmit() {
-  console.log(JSON.stringify(this.form.value));
   this.createDenuncia(this.form.value);
   this.resetForm(this.form);
   this.route.navigate(['/tabs/tab2']);
@@ -47,7 +46,6 @@ onSubmit() {
       },
       erro => {
         if(erro.status == 500) {
-          console.log(erro);
           this.presentToast();
         }
       }
