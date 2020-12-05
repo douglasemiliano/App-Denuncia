@@ -29,7 +29,6 @@ export class LoginComponent {
   });
 }
 onSubmit() {
-  console.log(JSON.stringify(this.form.value));
   this.presentToast();
   this.dismissModal();
   }

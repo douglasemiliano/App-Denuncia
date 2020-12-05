@@ -2,6 +2,7 @@ import { ModalDenunciaComponent } from './../components/modal-denuncia/modal-den
 import { ModalController } from '@ionic/angular';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginComponent } from '../components/login/login.page';
 
 @Component({
   selector: 'app-tabs',
@@ -49,6 +50,13 @@ export class TabsPage {
     this.home = false;
   }
 
+  async presentModalLogout() {
+    const modal = await this.modalController.create({
+      component: LoginComponent,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
 
 
 }
