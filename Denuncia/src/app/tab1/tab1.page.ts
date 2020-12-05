@@ -2,6 +2,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -13,7 +14,7 @@ export class Tab1Page {
   form: FormGroup;
   private apiURL: string;
 
-  constructor(private fb: FormBuilder,private http: HttpClient, public toastController: ToastController) { 
+  constructor(private fb: FormBuilder,private http: HttpClient, public toastController: ToastController, private route: Router) { 
     this.apiURL = 'http://localhost:8080/denuncias'
   }
 
@@ -34,6 +35,8 @@ export class Tab1Page {
 onSubmit() {
   console.log(JSON.stringify(this.form.value));
   this.createDenuncia(this.form.value);
+  this.resetForm(this.form);
+  this.route.navigate(['/tabs/tab2']);
   }
 
   public createDenuncia(denuncia){
@@ -68,5 +71,12 @@ onSubmit() {
     });
     toast.present();
   }
+
+  resetForm(form: FormGroup) {
+    form.reset();
+    Object.keys(form.controls).forEach(key => {
+      form.get(key).setErrors(null) ;
+    });
+}
 
 }
