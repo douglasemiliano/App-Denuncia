@@ -14,6 +14,9 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   imports: [
@@ -30,7 +33,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatChipsModule,
     MatButtonToggleModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxMaskModule.forRoot()
   ],
   declarations: [Tab1Page]
 })
