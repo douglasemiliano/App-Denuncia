@@ -25,7 +25,7 @@ export class Tab1Page {
   createForm(){ this.form = this.fb.group({
     name: new FormControl('', [Validators.required]),
     age: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(3)]),
-    phone: new FormControl('', [Validators.required]),
+    phone: new FormControl(''),
     assediotype: new FormControl('', [Validators.required]),
     local: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
