@@ -2,7 +2,7 @@
 
     <form [formGroup]="form" autocomplete="off" novalidate (ngSubmit)="onSubmit()" id="form-login">
       <ion-grid>
-        <h1>Nova Denúncia</h1>
+        <h1 style="text-align: center;">Nova Denúncia</h1>
             <ion-row class="linha">
                 <ion-col size="12">
                     <div class="form-group">
@@ -18,7 +18,7 @@
                     <div class="form-group">
                         <mat-form-field appearance="outline" style="width: 100%;">
                             <mat-label>Telefone</mat-label>
-                            <input matInput  class="form-control" formControlName="phone" aria-describedby="emailHelp" placeholder="Telefone">
+                            <input matInput  class="form-control" formControlName="phone" aria-describedby="emailHelp" placeholder="Telefone" mask="(00) 0000-0000||(00) 0 0000-0000">
                         </mat-form-field>
                     </div>
                 </ion-col>
@@ -26,7 +26,7 @@
                     <div class="form-group">
                         <mat-form-field appearance="outline" style="width: 100%;">
                             <mat-label>Idade</mat-label>
-                            <input matInput  class="form-control" formControlName="age" aria-describedby="emailHelp" placeholder="Idade">
+                            <input matInput  class="form-control" formControlName="age" aria-describedby="emailHelp" placeholder="Idade" mask="00">
                         </mat-form-field>
                     </div>
                 </ion-col>

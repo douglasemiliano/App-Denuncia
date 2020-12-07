@@ -20,7 +20,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { LoginModule } from './components/login/login.module'
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,7 +43,8 @@ import { LoginModule } from './components/login/login.module'
     MatRadioModule,
     MatSelectModule,
     MatFormFieldModule,
-    LoginModule],
+    LoginModule,
+    NgxMaskModule.forRoot(),],
   providers: [
     StatusBar,
     SplashScreen,
